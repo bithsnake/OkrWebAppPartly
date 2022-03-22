@@ -1,8 +1,10 @@
 # Objective & Keyresults WebApplikation
 
-Det här är en objective and keyresults webbapplikation där man kan ska kunna göra följande:
+
 
 ## OBS detta är en mock , flera delar av källkod saknas och kan int köras
+
+Det här är en objective and keyresults webbapplikation där man kan ska kunna göra följande:
 • Logga in/logga ut
 • Authentisering med Azure MSAL
 • Lägga till / ändra / ta bort Keyresults
