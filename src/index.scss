@@ -1,0 +1,456 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+$modalMinOpacity : 0;
+$modalMaxOpacity : 150;
+$modalCurrentOpacity : 150;
+$navMenuMargin : 3rem;
+
+#root,html{
+  overflow-x: hidden;
+  background-repeat : no-repeat;
+  height: 100% !important;
+  font-family: 'Secular One', sans-serif;
+}
+
+body {
+  height: 100%;
+  background-repeat : no-repeat;
+  
+  // margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Secular One ,"Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  background: linear-gradient(#000000, #ffffff 60%);
+}
+
+.full-height{
+  height: 100%;
+}
+code {
+  font-family: Secular One,source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+#modal-background{
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0,0,0,$modalCurrentOpacity);
+}
+
+.transition-margin-y {
+  margin-top : $navMenuMargin;
+  margin-bottom : $navMenuMargin;
+  animation : transitionMarginY 1s ease-in-out;
+}
+.margin-y-stay{
+  margin-top : $navMenuMargin;
+  margin-bottom : $navMenuMargin;
+}
+.fade-in-modal{
+  animation : fadeInModal 2s ease-in-out !important;
+}
+
+.fade-out-modal{
+  animation : fadeOutModal 2s ease-in-out !important;
+}
+
+.fade-in:first-child{
+  animation : fadeIn 2s ease-in-out !important;
+}
+.fade-anim-left div {
+  animation: fadeAnimLeft 1s ease-in-out;
+}
+.fade-anim-right div {
+  animation: fadeAnimRight 1s ease-in-out;
+}
+
+.appear-from-below p{
+  animation : appearFromBelow 2s ease-in-out;
+}
+
+.open-menu{
+  right: 0rem;
+  animation: openMenu 1s ease-in-out;
+}
+.close-menu{
+  right: -100%;
+  animation: closeMenu 1s ease-in-out;
+}
+
+.blink {
+  animation: blink-animation 1s  infinite ease-in-out;
+  -webkit-animation: blink-animation 1s infinite linear;
+}
+.border-blink {
+  animation: borderBlinkAnim 1s  infinite ease-in-out;
+  -webkit-animation: borderBlinkAnim 1s infinite linear;
+}
+
+#glow-logged-in-user-anchor:hover{
+  color: rgb(17, 110, 224);
+  transition: all 0.1s ease-in-out;
+}
+.glowbutton:hover{
+
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-menu-items{
+  /* color: rgb(255, 255, 255); */
+  transition: all 0.2s ease-in-out;
+}
+.glow-menu-items:hover{
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-landscape-height{
+  height: 50vh !important;
+}
+
+/// 1280 x 575 smaller laptops
+@media only screen and (min-device-width: 1275px) and
+(max-device-width: 1285px) and
+(min-device-height: 575px){
+
+  .subgoals-landscape-height-small-laptop{
+    height: auto !important;
+  }
+
+
+}
+
+
+@media (min-device-width: 300px) and
+(max-device-width: 944px) and
+(orientation: landscape) {
+  .carousel-landscape-height {
+    height: 100vh !important;
+  }
+  .mobile-landscape-height{
+    height: 100vh !important;
+  }
+  .mobile-manual-landscape-position{
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .hide-logo{
+    visibility: hidden !important;
+  }
+  .landscape-height{
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  .subgoals-landscape-height{
+    height: 100% !important;
+    padding-top : 15% !important;
+    padding-bottom: 15% !important;
+  }
+
+  .retina-landscape-menu-right-distance {
+    right: 2rem !important;
+  }
+
+  .modal-phone-width-height{
+    z-index: 55 !important;
+    padding : 0 !important;
+    margin : 0 !important;
+    width : 100% !important;
+    height : 100% !important;
+    font-size : smaller !important;
+    overflow-y :scroll !important;
+    overflow-y: visible !important;
+  }
+}
+
+
+
+@media (min-device-width: 300px) and
+(max-device-width: 500px) and
+(orientation: portrait) {
+  .hide-logo{
+    visibility: hidden !important;
+  }
+  .mobile-landscape-height{
+    height: 100vh !important;
+  }
+  .modal-phone-width-height{
+    z-index: 55 !important;
+    padding : 0 !important;
+    margin : 0 !important;
+    width : 100% !important;
+    height : 100% !important;
+    font-size : smaller !important;
+    overflow-y :scroll !important;
+    overflow-y: visible !important;
+  }
+}
+
+/// Huawei p30 pro landscape
+@media (min-device-width: 1080px) and
+(max-device-width: 1085px) and
+(max-device-height: 600px) and
+(orientation: landscape) and
+(-webkit-min-device-pixel-ratio: 2.5)
+{
+  .carousel-landscape-height {
+    height: 100vh !important;
+  }
+  .mobile-landscape-height{
+    height: 100vh !important;
+  }
+  .mobile-manual-landscape-position{
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .landscape-height{
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  .retina-screens-subgoals-landscape-grid{
+    display: grid !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .retina-screens-subgoals-landscape-height{
+    height: 100vh !important;
+  }
+
+  .retina-landscape-menu-right-distance {
+    right: 2rem !important;
+  }
+}
+/// Huawei p30 pro portrait
+@media (min-device-width: 400px) and
+(max-device-width: 550px) and
+(max-device-height: 1085px) and
+(orientation: portrait) and
+(-webkit-min-device-pixel-ratio: 3)
+{
+
+  .retina-screens{
+    display: inline-flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+  }
+
+  .retina-screens-profile-items{
+    display: inline-flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    justify-content: center !important;   
+  }
+  .retina-screens-nav-menu{
+    width: 100% !important;
+  }
+
+  .portait-mobile-4-5-dpr{
+    margin-left:auto !important;
+    margin-right: auto !important;
+
+  }
+  .retina-screens-profile-picture{
+    // display: none !important;
+    &picture img{
+      width: 8rem !important;
+      height: 8rem !important;
+    }
+  }
+}
+
+
+/// Samsung Galaxy s9+
+@media (min-device-width: 300px) and
+(max-device-width: 500px) and
+(max-device-height: 740px) and
+(orientation: portrait) and
+(min-resolution: 4dppx),(-webkit-min-device-pixel-ratio: 4) and
+(min-resolution: 192dpi)
+{
+  .retina-screens-galaxy-position-and-size {
+    right: 0% !important;
+    left: 0% !important;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    width: 100% !important;
+    place-content: center !important;
+  }
+  .retina-screens-profile-picture{
+    display: none !important;
+    &picture img{
+      width: 8rem !important;
+      height: 8rem !important;
+    }
+  }
+}
+
+
+
+@media screen and (max-height: 1060px) {
+
+  .margin-y-stay{
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  @keyframes transitionMarginY{
+    from{
+      margin-top : 0rem;
+      margin-bottom : 0rem;
+    }
+  
+    to {
+  
+      margin-top : 2rem;
+      margin-bottom : 2rem;
+    }
+  }
+
+}
+
+@keyframes transitionMarginY{
+  from{
+    margin-top : 0rem;
+    margin-bottom : 0rem;
+  }
+
+  to {
+
+    margin-top : $navMenuMargin;
+    margin-bottom : $navMenuMargin;
+  }
+}
+
+@keyframes fadeInModal {
+  from {
+    $modalCurrentOpacity : $modalMinOpacity;
+  }
+
+  to {
+    $modalCurrentOpacity : $modalMaxOpacity;
+  }
+}
+@keyframes fadeOutModal {
+  from {
+    $modalCurrentOpacity : $modalMaxOpacity;
+  }
+
+  to {
+    $modalCurrentOpacity : $modalMinOpacity;
+  }
+}
+
+@keyframes fadeIn{
+  from  {
+    opacity : 0 !important;
+  }
+  70%{
+    translate-y: -2rem !important;
+  }
+  to {
+    translate-y: 0rem !important;
+    opacity : 1 !important;
+  }
+}
+
+@keyframes blink-animation {
+  50%{
+    opacity: 0.0;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+
+  50%{
+    opacity: 0.0;
+  }
+}
+ @keyframes borderBlinkAnim{
+   50%{
+     border-color:rgba(255,0,0,0);
+   }
+ }
+
+@keyframes appearFromBelow {
+  from {
+    opacity: 0 !important;
+    font-size: xx-large !important;
+    color: rgba(255,255,255,0) !important;
+    translate-y: 13rem !important;
+  }
+
+  50% {
+    translate-y: -2rem !important;
+  }
+  to{
+    opacity: 1;
+    translate-y: 0rem !important;
+    color: rgba(255,255,255,1) !important;
+  }
+}
+
+@keyframes fadeAnimLeft {
+  from {
+    opacity: 0;
+    margin-left:-150%;
+    /* width: 0%; */
+    translation-x : 40%;
+  }
+  to {
+    opacity: 0.2;
+    translation-x : 0%;
+  }
+}
+@keyframes fadeAnimRight {
+  from {
+    opacity: 0;
+    margin-left: 150%;
+    /* width: 0%; */
+    translation-x : -40%;    
+  }
+  to {
+    opacity: 0.2;
+    translation-x : 0%;
+  }
+}
+@keyframes openMenu {
+  0%{
+    right: -20%;
+    visibility: visible;
+  }
+
+  50%{
+    right: 1rem;
+  }
+  from{
+    opacity: 0;
+    right: -20%;
+  }
+  to{
+    opacity: 1;
+    right: 0rem;
+  }
+}
+
+@keyframes closeMenu {
+  from{
+    opacity: 1;
+    right: 0rem;
+  }
+  50%{
+    opacity: 0;
+  }
+  to{
+    opacity: 0;
+    right: -20%;
+  }
+  100%{
+    right: -20%;
+    visibility: hidden;
+  }
+  
+}

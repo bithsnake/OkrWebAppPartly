@@ -1,0 +1,55 @@
+.indicator-text {
+    -webkit-text-security: square !important;
+    -webkit-text-stroke: thick !important;
+  }
+  
+.carousel-inner{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-indicators {
+    list-style: none;
+    position: absolute;
+    bottom: 2%;
+    z-index: 0;
+}
+
+.carousel-indicators li {
+
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+
+.pie-chart div {
+    --tw-text-opacity: 1;
+    font-weight: 500;
+    font-size: 1rem/* 24px */;
+    line-height: 0rem/* 32px */;
+    display: -ms-inline-grid;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    place-self: center;
+    
+}
+
+.manual-center{
+    left: 50% !important;
+    right: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width : 376px) and (orientation : portrait){
+ .sm-hide-mobile-portait{
+   display: hidden !important;
+ }
+}

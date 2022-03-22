@@ -1,0 +1,1 @@
+export const space = <span className=" m-0 p-0 left-0 right-0 opacity-0 appearance-none">|</span>;
